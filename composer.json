@@ -1,0 +1,15 @@
+{
+    "name": "jolgt/projet-eco-ride",
+    "autoload": {
+        "psr-4": {
+            "Jolgt\\ProjetEcoRide\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "MbarkaToure",
+            "email": "mbarkatoure04@gmail.com"
+        }
+    ],
+    "require": {}
+}
