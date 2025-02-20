@@ -1,0 +1,694 @@
+@import "custom"; // S'assurer que ce fichier existe
+@import url("/node_modules/bootstrap-icons/font/bootstrap-icons.css");
+
+/* ====== GLOBAL ====== */
+html {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+  background-color: #f9f9f9;
+  color: #333;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+/* ====== STRUCTURE PRINCIPALE ====== */
+.main {
+  flex: 1;
+  padding: 20px;
+}
+
+.footer {
+  background-color: #311716;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+}
+
+/* ====== TYPOGRAPHIE ====== */
+p {
+  font-family: $font-family-serif;
+  font-size: 18px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 20px 0;
+  text-align: center;
+}
+
+/* ====== LIENS ====== */
+
+/* ====== NAVIGATION ====== */
+.navbar {
+  background-color: #311716;
+}
+
+.header nav ul {
+  display: flex;
+  list-style: none;
+  justify-content: flex-end;
+  gap: 15px;
+}
+
+.header nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+/* ====== FORMULAIRES ====== */
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+
+  .icon {
+    margin-right: 10px;
+  }
+}
+
+/* ====== BOUTONS ====== */
+.btn {
+  background-color: #8c7c6d;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.btn:hover {
+  background-color: #7b6a5b;
+}
+
+.btn-dark1 {
+  background-color: #3c221b;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: #8c7c6d;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #7b6a5b;
+}
+
+.btn-secondary {
+  background-color: #b89b9b;
+  font-size: 1.2em;
+  border-radius: 15px;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-secondary:hover {
+  background-color: #9c7d7d;
+}
+
+/* ====== SECTIONS PRINCIPALES ====== */
+.main-content {
+  margin: 40px auto;
+  padding: 20px;
+  max-width: 600px;
+  background-color: #311716;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  margin-bottom: 20px;
+  color: #624745;
+}
+
+.section {
+  max-width: 800px;
+  margin: 20px auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* ====== AFFICHAGE DES COVOITURAGES ====== */
+.rides {
+  width: 80%;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.ride {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.ride-img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-right: 20px;
+}
+
+.ride-details {
+  flex-grow: 1;
+}
+
+.details-btn {
+  display: block;
+  margin: 15px auto 0;
+  padding: 10px 20px;
+  background-color: #b89b9b;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.alternative-btn {
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #555;
+  }
+}
+
+/* ====== DÉTAILS CONDUCTEUR ====== */
+.driver-details {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.driver-photo img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.vehicle-details,
+.preferences {
+  margin-top: 20px;
+}
+
+.preferences ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.preferences li {
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* ====== SECTION PARTICIPATION ====== */
+.participate-section {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.participate-btn {
+  padding: 10px 20px;
+  background: #669571;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+
+  &:hover {
+    background: #218838;
+  }
+}
+
+/* ====== BOUTONS SPÉCIFIQUES ====== */
+
+.btn-warning {
+  background-color: #c29d5f;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-large {
+  width: 120px;
+}
+
+/* ====== SECTIONS SPÉCIFIQUES POUR L'ESPACE CHAUFFEUR ====== */
+#selection-role {
+  margin: 40px auto;
+}
+
+#chauffeur-form,
+#liste-courses {
+  background-color: #3b1e1e;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px auto;
+  max-width: 600px;
+}
+
+input,
+select {
+  display: block;
+  width: 80%;
+  margin: 10px auto;
+  padding: 10px;
+}
+
+/* ====== AJUSTEMENTS DIVERS ====== */
+.hidden {
+  display: none;
+}
+/*Contact*/
+body {
+  background-color: #f4f4f9;
+  font-family: "Arial", sans-serif;
+}
+.contact-title h1 {
+  font-size: 3rem;
+  color: #bc5409;
+  margin: 20px 0;
+}
+.contact-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+.form-label {
+  font-weight: bold;
+  color: #655618;
+}
+.btn-primary {
+  background-color: #655618;
+  border: none;
+  border-radius: 15px;
+  padding: 10px 20px;
+}
+.btn-primary:hover {
+  background-color: #bc5409;
+}
+.invalid-feedback {
+  color: #ff0000;
+}
+p {
+  font-size: 1.2rem;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+/*espace Employé */
+
+.employe-container {
+  max-width: 800px;
+  margin: auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+  h1,
+  h2 {
+    text-align: center;
+    color: #333;
+  }
+}
+
+.avis-section,
+.incidents-section {
+  background: #eee;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.avis {
+  background: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+}
+
+label {
+  display: block;
+  margin: 10px 0 5px;
+  font-weight: bold;
+}
+
+select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+
+  .btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  .valider {
+    background-color: #4caf50;
+    color: white;
+  }
+
+  .refuser {
+    background-color: #dd443f;
+    color: white;
+  }
+}
+/*espace administrateur*/
+
+.admin-header {
+  color: white;
+  padding: 20px;
+  font-size: 24px;
+}
+
+.btn-primary {
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 10px;
+}
+
+.create-account {
+  background-color: white;
+  padding: 20px;
+  margin: 20px auto;
+  width: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid;
+}
+
+.btn-submit {
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.statistics {
+  margin: 20px auto;
+}
+
+.chart-container {
+  width: 80%;
+  margin: 20px auto;
+}
+
+.account-management {
+  background-color: white;
+  padding: 20px;
+  margin: 20px auto;
+  width: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.btn-admin {
+  background-color: #dd443f;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+#create-account-section {
+  background-color: #311716;
+  padding: 20px;
+  margin: 20px auto;
+  width: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.admin-sup-container {
+  align-items: center;
+  padding: 20px;
+  margin: 20px auto;
+  width: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* covoiturages */
+
+/* ====== RÉSULTATS DE RECHERCHE ====== */
+#results-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+
+  .ride-card {
+    width: 300px;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    background: white;
+    text-align: center;
+
+    img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+    }
+
+    .ride-info {
+      margin-top: 10px;
+
+      p {
+        margin: 5px 0;
+      }
+    }
+  }
+}
+
+/* ====== DÉTAILS CONDUCTEUR ====== */
+.driver-details {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.driver-photo {
+  img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+}
+
+.vehicle-details,
+.preferences {
+  margin-top: 20px;
+}
+
+.preferences {
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  li {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+}
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 768px) {
+  .ride {
+    flex-direction: column;
+    text-align: center;
+
+    .ride-img {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  }
+
+  .search-container {
+    flex-direction: column;
+    align-items: center;
+
+    form {
+      flex-direction: column;
+      width: 100%;
+    }
+  }
+
+  .driver-details {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+/* ====== RESPONSIVE ====== */
+@media (max-width: 768px) {
+  .ride {
+    flex-direction: column;
+    text-align: center;
+
+    .ride-img {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.driver-details {
+  flex-direction: column;
+  text-align: center;
+}
+
+/* ====== RÉSULTATS DE RECHERCHE ====== */
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+
+  form {
+    display: flex;
+    gap: 10px;
+    input,
+    button {
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    input {
+      flex: 1;
+    }
+    .button3 {
+      background-color: #956e6d;
+      color: white;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      &:hover {
+        background-color: #5f3736;
+      }
+    }
+  }
+}
+
+.rides {
+  width: 80%;
+  max-width: 1200px;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#results-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+
+  .ride-card {
+    width: 300px;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: white;
+    text-align: center;
+    overflow: hidden;
+
+    img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .ride-info {
+      margin-top: 10px;
+      p {
+        margin: 5px 0;
+      }
+    }
+
+    .details-btn {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      background-color: #b89b9b;
+      color: white;
+      text-align: center;
+      margin-top: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      &:hover {
+        background-color: #9c7d7d;
+      }
+    }
+  }
+}

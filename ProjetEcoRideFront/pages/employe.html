@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Espace Employé - Validation des Avis</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="hero.css">
+</head>
+<body>
+<!-- Hero Section -->
+<div class="hero-scene text-center text-white">
+    <div class="hero-scene-content">
+        <h2>Mon Espace Employé</h2>
+    </div>
+    </div>
+
+    <section class="employe-container">
+        <h1>Espace Employé</h1>
+        
+        <div class="avis-section">
+            <h2>Avis en Attente de Validations</h2>
+
+            <div class="avis" id="avis-list">
+                <!-- Les avis seront générés dynamiquement ici -->
+            </div>
+
+            <label for="select-avis">Sélectionnez l'avis à valider</label>
+            <select id="select-avis">
+                <option value="">Listes des avis</option>
+                <!-- Options générées dynamiquement -->
+            </select>
+
+            <div class="buttons">
+                <button id="valider-btn" class="btn valider">Valider</button>
+                <button id="refuser-btn" class="btn refuser">Refuser</button>
+            </div>
+        </div>
+
+        <div class="incidents-section">
+            <h2>Covoiturages signalés</h2>
+            <div id="incident-list">
+                <!-- Liste des incidents sera générée dynamiquement ici -->
+            </div>
+        </div>
+    </section>
+
+    <script type="module" src="../js/employe.js" defer></script>
+
+</body>
+</html>
