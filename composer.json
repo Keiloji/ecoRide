@@ -1,4 +1,7 @@
-{
+{"scripts": {
+    "start": "php -S 0.0.0.0:$PORT -t public"
+},
+
     "name": "jolgt/projet-eco-ride",
     "autoload": {
         "psr-4": {
@@ -12,4 +15,5 @@
         }
     ],
     "require": {}
+    
 }
