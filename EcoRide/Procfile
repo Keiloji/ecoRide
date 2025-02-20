@@ -1,0 +1,4 @@
+web: php -S 0.0.0.0:$PORT -t public
+web: symfony server:start --no-tls --port $PORT
+web: vendor/bin/heroku-php-apache2 public/
+
