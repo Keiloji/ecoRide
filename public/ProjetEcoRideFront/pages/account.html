@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoRide - Mon Espace</title>
+  <link rel="stylesheet" href="assets/css/main.css">
+
+  <link rel="stylesheet" href="hero.css">
+</head>
+<body>
+<!-- Hero Section -->
+<div class="hero-scene text-center text-white">
+  <div class="hero-scene-content">
+    <h2>Mon Espace</h2>
+  </div>
+</div>
+  <!-- SECTION : Choix du rôle -->
+  <section id="selection-role" class="container my-4">
+    
+    <p>Vous souhaitez être :</p>
+    <button id="btn-chauffeur" class="btn btn-dark1 mx-2">Chauffeur</button>
+    <button id="btn-passager" class="btn btn-dark1 mx-2">Passager</button>
+  </section>
+
+  <!-- SECTION : Espace Chauffeur -->
+  <section id="espace-chauffeur" class="container my-4 hidden">
+    <!-- Message et formulaire chauffeur -->
+    <h3>Vous avez décidé de nous rejoindre en tant que chauffeur</h3>
+    <p>Merci de remplir les informations suivantes.</p>
+    
+    <!-- Upload de photo de profil -->
+    <div class="mb-3">
+      <label for="photo-profil" class="form-label">Photo de profil :</label>
+      <input type="file" id="photo-profil" accept="image/*" class="form-control">
+    </div>
+    
+    <!-- Formulaire véhicule -->
+    <h4>Informations sur votre véhicule</h4>
+    <div class="mb-3">
+      <input type="text" id="marque" class="form-control" placeholder="Marque du véhicule">
+    </div>
+    <div class="mb-3">
+      <input type="text" id="modele" class="form-control" placeholder="Modèle du véhicule">
+    </div>
+    <div class="mb-3">
+      <input type="text" id="couleur" class="form-control" placeholder="Couleur du véhicule">
+    </div>
+    <div class="mb-3">
+      <button id="ajouter-vehicule" type="button" class="btn btn-secondary">Enregistrer ce véhicule</button>
+    </div>
+    
+    <!-- Préférences -->
+    <h4>Vos préférences</h4>
+    <div class="mb-3">
+      <label class="form-check-label me-2">
+        <input type="radio" name="fumeur" value="Fumeur" class="form-check-input"> Fumeur
+      </label>
+      <label class="form-check-label">
+        <input type="radio" name="fumeur" value="Non fumeur" class="form-check-input"> Non fumeur
+      </label>
+    </div>
+    <div class="mb-3">
+      <label class="form-check-label me-2">
+        <input type="radio" name="animaux" value="Animaux acceptés" class="form-check-input"> Animaux acceptés
+      </label>
+      <label class="form-check-label">
+        <input type="radio" name="animaux" value="Pas d'animaux" class="form-check-input"> Pas d'animaux
+      </label>
+    </div>
+    <div class="mb-3">
+      <input type="text" id="autres-preferences" class="form-control" placeholder="Autres préférences (optionnel)">
+    </div>
+    
+    <!-- Formulaire de voyage pour chauffeur -->
+    <h4>Saisir votre voyage</h4>
+    <div class="mb-3">
+      <input type="text" id="lieu-depart" class="form-control" placeholder="Lieu de départ">
+    </div>
+    <div class="mb-3">
+      <input type="text" id="destination" class="form-control" placeholder="Destination">
+    </div>
+    <div class="mb-3">
+      <select id="choix-vehicule" class="form-control">
+        <option value="">Choisissez un véhicule</option>
+      </select>
+    </div>
+    <div class="mb-3">
+      <input type="date" id="date-depart" class="form-control">
+    </div>
+    <div class="mb-3">
+      <input type="text" id="prix" class="form-control" placeholder="Prix de la course">
+    </div>
+    <div class="mb-3">
+      <button id="poster-course" type="button" class="btn btn-primary w-100">Poster</button>
+    </div>
+        <!-- Hero Section -->
+        <div class="hero-scene text-center text-white">
+          <div class="hero-scene-content">
+              <h2>Prêt à lancé la course</h2>
+          </div>
+      </div>
+    <!-- Section affichant les courses postées par le chauffeur -->
+    <section id="courses-chauffeur" class="my-4">
+      <h4>Vos courses publiées</h4>
+      <div id="courses-container"></div>
+      <!-- Chaque course affichera trois boutons : Démarrer, Annuler, Arrivé à destination -->
+    </section>
+  </section>
+
+  <!-- SECTION : Espace Passager -->
+  <section id="espace-passager" class="container my-4 hidden">
+    <h3>Bienvenue dans votre espace Passager</h3>
+    <!-- Affichage des crédits actuels et option d'ajouter des crédits -->
+    <div class="mb-3">
+      <p>Crédits actuels : <span id="credits-actuels">20</span></p>
+      <label for="ajouter-credit">Ajouter des crédits (1 crédit = 1€) :</label>
+      <input type="number" id="ajouter-credit" class="form-control" placeholder="Nombre de crédits à ajouter">
+      <button id="btn-ajouter-credit" type="button" class="btn btn-secondary mt-2">Ajouter</button>
+    </div>
+    <!-- Liste des voyages auxquels le passager a participé -->
+    <section id="courses-passager" class="my-4">
+      <h4>Mes trajets</h4>
+      <div id="passager-courses-container"></div>
+      <!-- Pour chaque trajet, le passager pourra : valider que la course est terminée, laisser un commentaire, ou signaler un incident -->
+    </section>
+  </section>
+
+  <!-- Inclusion du script JavaScript -->
+  <script type="module" src="../js/account.js" defer></script>
+</body>
+</html>

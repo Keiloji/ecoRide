@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Covoiturages Disponibles</title>
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="hero.css">
+</head>
+<body>
+  <!-- Hero Section -->
+  <div class="hero-scene2 text-center text-white">
+    <div class="hero-scene-content2">
+      <h1>Covoiturages Disponibles</h1><br>
+      <p>Découvrez les résultats correspondant à vos critères de recherche.</p>
+    </div>
+  </div>
+
+  <!-- Formulaire de recherche -->
+  <div class="search-container">
+    <form id="search-form">
+      <input type="text" id="departure" placeholder="Ville de départ" required>
+      <input type="text" id="arrival" placeholder="Ville d'arrivée" required>
+      <input type="date" id="date" required>
+      <button type="submit" class="button3">Rechercher</button>
+    </form>
+  </div>
+
+  <!-- Barre de filtres (ne pas modifier) -->
+  <div class="container my-4">
+    <div class="dropdown">
+      <button class="btn2 dropdown-toggle w-100 btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Filtres
+      </button>
+      <ul class="dropdown-menu p-4">
+        <form id="filterForm">
+          <li>
+            <div class="form-check mb-3">
+              <input class="form-check-input" type="checkbox" id="ecological" name="ecological">
+              <label class="form-check-label" for="ecological">
+                Trajets écologiques (voitures électriques uniquement)
+              </label>
+            </div>
+          </li>
+          <li>
+            <div class="mb-3">
+              <label for="price" class="form-label">Prix maximum (€) :</label>
+              <input type="number" class="form-control" id="price" name="price" placeholder="Ex : 50" min="0">
+            </div>
+          </li>
+          <li>
+            <div class="mb-3">
+              <label for="duration" class="form-label">Durée maximale (en minutes) :</label>
+              <input type="number" class="form-control" id="duration" name="duration" placeholder="Ex : 120" min="0">
+            </div>
+          </li>
+          <li>
+            <div class="mb-3">
+              <label for="rating" class="form-label">Note minimale du conducteur :</label>
+              <input type="number" class="form-control" id="rating" name="rating" placeholder="Ex : 4.5" step="0.1" min="1" max="5">
+            </div>
+          </li>
+          <li class="text-center">
+            <button type="submit" class="btn btn-primary">Appliquer les filtres</button>
+          </li>
+        </form>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Section Résultats -->
+  <section class="rides">
+    <h2 class="text-center">Résultats</h2>
+    <p id="no-results" class="hidden">Aucun covoiturage disponible. Veuillez modifier la date de voyage.</p>
+    <div id="results-container"></div>
+  </section>
+
+  <footer class="text-center">
+    <p>Pour plus de choix, tentez un autre itinéraire</p>
+    <a href="/"><button class="alternative-btn">Itinéraire</button></a> <br> <br>
+  </footer>
+
+  <script type="module" src="../js/covoiturages.js" defer></script>
+</body>
+</html>
+

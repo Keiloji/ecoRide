@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Espace Administrateur - EcoRide</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="module" src="../js/admin.js" defer></script>
+</head>
+<body>
+<!-- Hero Section -->
+<div class="hero-scene text-center text-white">
+    <div class="hero-scene-content">
+        <h1>Espace Administrateur</h1>
+    </div>
+</div>
+    <!-- Formulaire pour créer un employé -->
+    <section id="create-account-section">
+        <h2 class="text-white">Créer un compte employé</h2>
+        <form id="create-employee-form" class="text-white">
+            <label for="name">Nom et Prénom:</label>
+            <input type="text" id="name" placeholder="Nom et Prénom" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="Email" required>
+
+            <label for="password">Mot de passe:</label>
+            <input type="password" id="password" placeholder="Mot de passe" required>
+
+            <button type="submit" class="btn">Créer</button>
+        </form>
+    </section>
+<!-- Hero Section -->
+<div class="hero-scene5 text-center text-white">
+    <div class="hero-scene-content5">
+        <h2>Crédits du jours</h2>
+    </div>
+</div>
+    <section class="statistics">
+        <div class="chart-container">
+            <canvas id="creditsChart"></canvas>
+        </div>
+<!-- Hero Section -->
+<div class="hero-scene6 text-center text-white">
+    <div class="hero-scene-content6">
+        <h2>nombre de covoiturage du jour</h2>
+    </div>
+</div>
+        <div class="chart-container">
+            <canvas id="ridesChart"></canvas>
+        </div>
+    </section>
+
+    
+
+    <div class="delete-account admin-sup-container">
+        <h2>Supprimer un compte</h2>
+    
+        <label for="select-account">Sélectionnez le compte à supprimer</label>
+        <select id="select-account">
+            <option value="">Liste des comptes</option>
+        </select>
+    
+        <div class="btn-admin">
+            <button id="delete-account-btn" class="btn-admin ">Supprimer</button>
+        </div>
+    </div>
+    </body>
+</html>

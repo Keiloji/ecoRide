@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="hero.css">
+
+
+    <title>EcoRide</title>
+</head>
+<body>
+    <!-- Hero Section -->
+    <div class="hero-scene text-center text-white">
+        <div class="hero-scene-content">
+            <h2>BIENVENUE à nos Éco Conducteur</h2>
+        </div>
+    </div>
+    <!-- Mon Itinéraire Section -->
+    <section class="main-content">
+        <div class="container">
+            <h1 class="title">Mon Itinéraire</h1>
+            <form class="form" action="covoiturage.html" method="GET">
+                <div class="form-group">
+                    <span class="icon">⬤</span>
+                    <input type="text" placeholder="Départ" class="input" name="depart" required>
+                </div>
+                <div class="form-group">
+                    <span class="icon">📍</span>
+                    <input type="text" placeholder="Destination" class="input" name="destination" required>
+                </div>
+                <div class="form-group">
+                    <span class="icon">👥</span>
+                    <input type="number" placeholder="Passager" class="input" name="passagers" min="1" required>
+                </div>
+                <div class="form-group">
+                    <span class="icon">📅</span>
+                    <input type="date" class="input" name="date" required>
+                </div>
+                <a href="/covoiturages"><button type="submit" class="btn">Rechercher</button></a>
+            </form>
+            
+        </div>
+    </section>
+
+    <!-- Qui Sommes-Nous Section -->
+    <article>
+        <div class="container p-4">
+            <h2 class="text-center text-primary">Qui Sommes-nous ?</h2>
+            <div class="row row-cols-2 align-items-center">
+                <div class="col">
+                    <p class="text-justify">
+                        EcoRide est une jeune entreprise innovante dédiée à la réduction de l'empreinte écologique dans le secteur des transports. Notre mission principale est de promouvoir une mobilité durable à travers des solutions de covoiturage adaptées aux besoins des particuliers et des professionnels.
+                    </p>
+                </div>
+                <div class="col">
+                    <img class="w-100 rounded" src="../Image/pexels-cottonbro-5329298.jpg" />
+                </div>
+            </div>
+            <div class="text-center pt-4">
+                <a href="/aboutUs"><button  class="btn-secondary text-white">En savoir plus</button> </a>
+                
+            </div>
+        </div>
+    </article>
+
+    <article class="bg-dark">
+        <div class="container p-4">
+            <h2 class="text-center text-secondary">Nos Valeurs</h2>
+            <div>
+                    <p class="text-align text-center text-white text-justify">
+                        Durabilité : Placer l'écologie au cœur de nos activités.<br/>
+                        Innovation : Proposer des solutions modernes et intuitives pour une expérience utilisateur optimale.<br/>
+                        Accessibilité : Offrir des services abordables et simples d'utilisation pour tous.<br/>
+                        Communauté : Favoriser des liens sociaux entre nos utilisateurs.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <article>
+        <div class="container p-4">
+            <h2 class="text-center text-primary">Nos Services</h2>
+            <div>
+                    <p class="text-align text-center text-justify">
+                        Nous voulons vous offrir une plateforme de covoiturage écoresponsable à l’aide d’une interface intuitive vous permettant  de trouver ou de proposer des trajets en véhicule .
+                        Nous avons mis en place un système de crédits où chaque utilisateur reçoit 20 crédits dès son inscription, qu'il peut utiliser pour payer ses courses. Pour vous offrir le meilleur service, 2 crédits seront prélevés par l'application, et chaque conducteur sera libre de fixer le prix de son trajet.
+                        Nous vous proposons un tableau de bord personnalisé  comprenant un historique des trajets, gestion des paiements, et options de suivi des économies de CO2.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <article class="bg-dark">
+        <div class="container p-4">
+            <h2 class="text-center text-secondary">Pourquoi nous choisir ?</h2>
+            <div>
+                    <p class="text-align text-center text-justify text-white">
+                        En choisissant EcoRide, vous participez à une initiative qui combine économie, écologie, et praticité. Nos solutions sont conçues pour répondre aux besoins actuels de mobilité tout en préparant un avenir plus vert.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <article>
+        <div class="container p-4">
+            <h2 class="text-center text-primary text-justify">Le changements c’est maintenant !<br/>
+                Rejoignez Nous !</h2>
+                <div class="text-center pt-4">
+                    <a href="/signup"><button class="btn text-white">Je me lance ! </button></a>                    
+                </div>
+            </div>
+        </div>
+    </article>
+</body>
+</html>
